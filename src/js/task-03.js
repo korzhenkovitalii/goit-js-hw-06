@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryList = document.querySelector('.gallery');
+
+for (const image of images) {
+  galleryList.insertAdjacentHTML(
+    'afterbegin',
+    `<li><img src= "${image.url}" alt= "${image.alt}"></li>`
+  );
+}
+// Что не так сделал ниже через мар?
+// const makeImageGallery = images.map(image => {
+//   galleryList.insertAdjacentHTML(
+//     'afterbegin',
+//     `<li><img src= "${image.url}" alt= "${image.alt}"></li>`
+//   );
+// });
+// console.log(makeImageGallery);
+
+console.log(galleryList);
+
