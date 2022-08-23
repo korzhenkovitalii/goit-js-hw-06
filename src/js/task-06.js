@@ -4,9 +4,9 @@
 
 const inputEl = document.querySelector('#validation-input');
 
-inputEl.addEventListener('blur', testValidationInput);
+inputEl.addEventListener('blur', onInputTestValidation);
 
-function testValidationInput(event) {
+function onInputTestValidation(event) {
   if (event.currentTarget.value.length === '') return;
 
   event.currentTarget.value.length == inputEl.dataset.length
